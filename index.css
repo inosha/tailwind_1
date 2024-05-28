@@ -1,5 +1,19 @@
+/* traditional css */
 .box{
     background-color: red;
     padding: 10px;
+    text-align: center;
+}
+/* UFCS  approach*/
+    /* Utility classes' definitions*/
+.bg-red {
+    background-color: red;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.text-center {
     text-align: center;
 }
