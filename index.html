@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="bg-gray-300">
 
     <!-- traditional css approach -->
     <div class="box">Box</div>
@@ -18,7 +18,7 @@
     <br/>
 
     <!-- UFCS approach -->
-    <div class="bg-red text-center p-10">UFCS Box</div>
+    <div class="p-10 text-center bg-red">UFCS Box</div>
     <br>
 
     <div class="text-center bg-green-500 ">tailwind</div>
@@ -45,16 +45,98 @@
 
     <div class="min-h-[1vh] max-w-sm mx-auto bg-blue-400"> min-h-{value} = min/max width/hight</div>
     <!-- max-w-screen-md -->
-    <div class=" mx-auto bg-green-300 mt-6 p-4 m-2"> 3. padding & margin
+    <div class="p-4 m-2 mx-auto mt-6 bg-green-300 "> 3. padding & margin
         <br>
         p-{}<br>
         m-{}<br>
         pt pr pb pl px py, mt mr mb ml mx my<br>
         -mt-{value} = negative margin<br>
-
+        
     </div>
     <!-- max-w-screen-md -->
+    
+    <!-- typography -->
+    <div class="text-base italic tracking-widest font-extralight">4. typograhy<br>
+        font family = font-serif<br>
+        font size = text-xl text-[20px]<br>
+        font style = italic, font-bold, font-extralight<br>
+        font weight = font-thin<br>
+        letter spacing = tracking-wide<br>
+        line height = leading-{10 / (relaxed/snug)}<br>
+        text align = text-{left,center,right,justify...}<br>
+    </div>
+    <p class="leading-relaxed text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio fuga quibusdam totam, sunt sequi, enim cupiditate commodi modi iusto exercitationem pariatur tempora. Ex tempore itaque voluptatibus, et doloremque ad.</p>
+<hr>
+        <!-- typography 2-->
+        <div class=" text-blue-950">4. typograhy<br>
+            text color = text-red-400<br>
+            <div class="underline">text decoration = underline, overline, line-through </div>
+            <div class="underline decoration-slate-400">text decoration color =   decoration-blue-600</div>
+            <div class="underline decoration-wavy">text decoration style = decoration-{dotted/ dashed/.. } </div>
+            <div class="underline decoration-4">text decoration thickness = decoration-4</div>
+            <div class="capitalize">text transform = uppercase, lowercase, capitalize</div>
+            <div class="bg-gradient-to-r from-blue-900 via-red-900 to-yellow-400 max-w-fit font-extrabold text-[44px] text-transparent bg-clip-text"> clip text = text-transparent bg-clip-text</div>
+        </div>
+<div class="text-2xl ">5. positioning</div>
+    <div class="absolute left-24">positioning = inset-{} inset-x-{} OR relative OR absolute left-24 top-{}</div>
+    <br>
+    <div class="visible"> visibility = invisible / visible</div>
+    <div class=""> Z index(depth) = relative z-{#}
+        <p class="relative z-20 w-2 p-5 m-2 bg-yellow-300">1</p>
+        <p class="relative z-10 w-10 p-5 m-4 -mt-10 bg-blue-400">2</p>
+    </div>
 
+    Display = block, grid, inline-block <br>
+    Float = relative block float-right, relative block clear-right
+    <br>
+
+
+<div class="text-2xl ">6. flexbox</div>
+6.1 flex = flex 
+<div class="flex flex-wrap justify-center gap-3"> 
+
+    <div class="order-3 p-10 bg-purple-500 ">Flex = box-1</div>
+    <div class="order-2 p-10 bg-purple-400">Flex = box-2</div>
+    <div class="order-1 p-10 bg-purple-300">Flex = box-3</div>
+    
+</div>
+6.2 flex direction = flex-row flex-col <br>
+6.3 flex wrap = flex-wrap
+6.4 flex grow = flex-grow
+6.5 order = order-{1/2/3}
+6.6 margin = gap-{1/2...}
+6.7 justify = justify-{center, start, end}
+6.8 align = item-{center, strech}
+
+<hr>
+<div class="text-2xl ">7. CSS grid</div>
+7.1 grid = grid <br>
+7.2 gris template columns = grid-cols-{1,2,..} <br>
+7.3 column span = col-span-{1,2..}
+
+<div class="grid grid-cols-2 gap-3"> 
+    <div class="p-10 bg-purple-500 ">Flex = box-1</div>
+    <div class="p-10 bg-purple-400 ">Flex = box-2</div>
+    <div class="col-span-2 p-10 bg-purple-300 ">Flex = box-3</div>   
+</div>
+
+<div class="text-2xl ">8. Borders</div>
+8.1 border width = border-{1,2../[1px]}<br>
+8.2 border color = border-blue-950<br>
+8.3 border style = border-dotted<br>
+8.4 border radius = rouded-{full, mg, lg ..}<br>
+8.5 border radius directions= rouded-t-full , rouded-l-full<br>
+<div class="p-10 m-5 bg-blue-400 rounded-b-full border-dotted border-[10px] border-blue-950"> box</div>
+
+<div class="text-2xl ">9. Effects</div>
+9.1 Box shadow = shadow / shadow-mg<br>
+9.2 Box shadow color = shadow-green-300<br>
+9.3 Opacity <br>
+9.4 Filters <br>
+
+<div class="w-32 h-32 m-4 bg-white shadow-xl shadow-blue-600">
+    my card
+</div>
 
 </body>
 </html>
